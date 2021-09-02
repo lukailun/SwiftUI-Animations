@@ -28,8 +28,7 @@ struct PolygonShapeView: View {
                 GreenButton(label: "+") { sides += 1 }
                 GreenButton(label: "-") { sides = max(sides - 1, 1) }
             }
-            .navigationBarTitle("Example 1")
-            .padding(.bottom, 50)
+            .navigationBarTitle("PolygonShapeView")
         }
     }
 }
