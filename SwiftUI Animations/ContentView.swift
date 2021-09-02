@@ -14,8 +14,8 @@ struct ContentView: View {
             List {
                 Section(header: Text("Part 1: Path Animations")) {
                     NavigationLink(
-                        destination: Polygon(),
-                        label: { Text("1. Polygon") }
+                        destination: PolygonAnimatable(),
+                        label: { Text("1. Polygon Animatable") }
                     )
                     NavigationLink(
                         destination: ScalablePolygon(),

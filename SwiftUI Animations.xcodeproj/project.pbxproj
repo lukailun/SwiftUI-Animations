@@ -13,7 +13,7 @@
 		5A80160E26DF78260028BF16 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A80160D26DF78260028BF16 /* ContentView.swift */; };
 		5A80161026DF78280028BF16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A80160F26DF78280028BF16 /* Assets.xcassets */; };
 		5A80161326DF78280028BF16 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A80161226DF78280028BF16 /* Preview Assets.xcassets */; };
-		5A80161C26DF790C0028BF16 /* Polygon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A80161B26DF790C0028BF16 /* Polygon.swift */; };
+		5A80161C26DF790C0028BF16 /* PolygonAnimatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A80161B26DF790C0028BF16 /* PolygonAnimatable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +25,7 @@
 		5A80160F26DF78280028BF16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A80161226DF78280028BF16 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5A80161426DF78280028BF16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5A80161B26DF790C0028BF16 /* Polygon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Polygon.swift; sourceTree = "<group>"; };
+		5A80161B26DF790C0028BF16 /* PolygonAnimatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolygonAnimatable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +80,7 @@
 		5A80161A26DF78CB0028BF16 /* PathAnimations */ = {
 			isa = PBXGroup;
 			children = (
-				5A80161B26DF790C0028BF16 /* Polygon.swift */,
+				5A80161B26DF790C0028BF16 /* PolygonAnimatable.swift */,
 				5A1A9C2726E0DD1100EB921C /* ScalablePolygon.swift */,
 			);
 			path = PathAnimations;
@@ -156,7 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A80160E26DF78260028BF16 /* ContentView.swift in Sources */,
-				5A80161C26DF790C0028BF16 /* Polygon.swift in Sources */,
+				5A80161C26DF790C0028BF16 /* PolygonAnimatable.swift in Sources */,
 				5A80160C26DF78260028BF16 /* SwiftUI_AnimationsApp.swift in Sources */,
 				5A1A9C2626E0D3EE00EB921C /* GreenButton.swift in Sources */,
 				5A1A9C2826E0DD1100EB921C /* ScalablePolygon.swift in Sources */,

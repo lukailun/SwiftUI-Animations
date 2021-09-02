@@ -1,5 +1,5 @@
 //
-//  Polygon.swift
+//  PolygonAnimatable.swift
 //  SwiftUI Animations
 //
 //  Created by 陆凯伦 on 2021/9/1.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Polygon: View {
+struct PolygonAnimatable: View {
     @State private var sides = 4
     
     var body: some View {
@@ -29,13 +29,13 @@ struct Polygon: View {
                 GreenButton(label: "-") { sides = max(sides - 1, 1) }
             }
         }
-        .navigationBarTitle("Polygon")
+        .navigationBarTitle("Polygon Animatable")
     }
 }
 
-struct Polygon_Previews: PreviewProvider {
+struct PolygonAnimatable_Previews: PreviewProvider {
     static var previews: some View {
-        Polygon()
+        PolygonAnimatable()
     }
 }
 
