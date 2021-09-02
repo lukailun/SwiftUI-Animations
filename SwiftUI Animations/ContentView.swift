@@ -14,8 +14,8 @@ struct ContentView: View {
             List {
                 Section(header: Text("Part 1: Path Animations")) {
                     NavigationLink(
-                        destination: PolygonShapeView(),
-                        label: { Text("1. PolygonShapeView") }
+                        destination: Polygon(),
+                        label: { Text("1. Polygon") }
                     )
                     
 //                    NavigationLink(destination: Example2(), label: {

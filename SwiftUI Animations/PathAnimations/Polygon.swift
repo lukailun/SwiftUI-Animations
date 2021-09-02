@@ -1,5 +1,5 @@
 //
-//  PolygonShapeView.swift
+//  Polygon.swift
 //  SwiftUI Animations
 //
 //  Created by 陆凯伦 on 2021/9/1.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PolygonShapeView: View {
+struct Polygon: View {
     @State private var sides: Int = 4
     
     var body: some View {
@@ -29,13 +29,13 @@ struct PolygonShapeView: View {
                 GreenButton(label: "-") { sides = max(sides - 1, 1) }
             }
         }
-        .navigationBarTitle("PolygonShapeView")
+        .navigationBarTitle("Polygon")
     }
 }
 
-struct PolygonShapeView_Previews: PreviewProvider {
+struct Polygon_Previews: PreviewProvider {
     static var previews: some View {
-        PolygonShapeView()
+        Polygon()
     }
 }
 
