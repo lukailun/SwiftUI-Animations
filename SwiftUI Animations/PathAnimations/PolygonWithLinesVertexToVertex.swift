@@ -13,7 +13,7 @@ struct PolygonWithLinesVertexToVertex: View {
     var body: some View {
         VStack {
             PolygonShape(sides: sides)
-                .stroke(Color.pink, lineWidth: 3)
+                .stroke(Color.blue, lineWidth: 3)
                 .padding(20)
                 .animation(.easeInOut(duration: 1.75))
                 .layoutPriority(1)
