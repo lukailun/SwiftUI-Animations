@@ -57,9 +57,9 @@ private struct PolygonShape: Shape {
         let hypotenuse = Double(min(rect.size.width, rect.size.height)) / 2.0
         let center = CGPoint(x: rect.size.width / 2.0, y: rect.size.height / 2.0)
         var path = Path()
-        let extra = Double(sides) != Double(Int(sides)) ? 1 : 0
-        for index in 0..<Int(sides) + extra {
-            let angle = (Double(index) * (360.0 / Double(sides))) * Double.pi / 180
+        let extra = Double(sidesAsDouble) != Double(Int(sidesAsDouble)) ? 1 : 0
+        for index in 0..<Int(sidesAsDouble) + extra {
+            let angle = (Double(index) * (360.0 / Double(sidesAsDouble))) * Double.pi / 180
             let point = CGPoint(x: center.x + CGFloat(cos(angle) * hypotenuse), y: center.y + CGFloat(sin(angle) * hypotenuse))
             if index == 0 {
                 path.move(to: point)
