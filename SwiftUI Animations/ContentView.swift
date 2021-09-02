@@ -18,8 +18,8 @@ struct ContentView: View {
                         label: { Text("1. Polygon Animatable") }
                     )
                     NavigationLink(
-                        destination: ScalablePolygon(),
-                        label: { Text("2. Scalable Polygon") }
+                        destination: PolygonWithMultipleAnimatableParamters(),
+                        label: { Text("2. Polygon with Multiple Animatable Paramters") }
                     )
                     
 //                    NavigationLink(destination: Example2(), label: {

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5A1A9C2626E0D3EE00EB921C /* GreenButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1A9C2526E0D3EE00EB921C /* GreenButton.swift */; };
-		5A1A9C2826E0DD1100EB921C /* ScalablePolygon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1A9C2726E0DD1100EB921C /* ScalablePolygon.swift */; };
+		5A1A9C2826E0DD1100EB921C /* PolygonWithMultipleAnimatableParamters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1A9C2726E0DD1100EB921C /* PolygonWithMultipleAnimatableParamters.swift */; };
 		5A80160C26DF78260028BF16 /* SwiftUI_AnimationsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A80160B26DF78260028BF16 /* SwiftUI_AnimationsApp.swift */; };
 		5A80160E26DF78260028BF16 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A80160D26DF78260028BF16 /* ContentView.swift */; };
 		5A80161026DF78280028BF16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A80160F26DF78280028BF16 /* Assets.xcassets */; };
@@ -18,7 +18,7 @@
 
 /* Begin PBXFileReference section */
 		5A1A9C2526E0D3EE00EB921C /* GreenButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenButton.swift; sourceTree = "<group>"; };
-		5A1A9C2726E0DD1100EB921C /* ScalablePolygon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScalablePolygon.swift; sourceTree = "<group>"; };
+		5A1A9C2726E0DD1100EB921C /* PolygonWithMultipleAnimatableParamters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolygonWithMultipleAnimatableParamters.swift; sourceTree = "<group>"; };
 		5A80160826DF78260028BF16 /* SwiftUI Animations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI Animations.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A80160B26DF78260028BF16 /* SwiftUI_AnimationsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_AnimationsApp.swift; sourceTree = "<group>"; };
 		5A80160D26DF78260028BF16 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -81,7 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				5A80161B26DF790C0028BF16 /* PolygonAnimatable.swift */,
-				5A1A9C2726E0DD1100EB921C /* ScalablePolygon.swift */,
+				5A1A9C2726E0DD1100EB921C /* PolygonWithMultipleAnimatableParamters.swift */,
 			);
 			path = PathAnimations;
 			sourceTree = "<group>";
@@ -159,7 +159,7 @@
 				5A80161C26DF790C0028BF16 /* PolygonAnimatable.swift in Sources */,
 				5A80160C26DF78260028BF16 /* SwiftUI_AnimationsApp.swift in Sources */,
 				5A1A9C2626E0D3EE00EB921C /* GreenButton.swift in Sources */,
-				5A1A9C2826E0DD1100EB921C /* ScalablePolygon.swift in Sources */,
+				5A1A9C2826E0DD1100EB921C /* PolygonWithMultipleAnimatableParamters.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,5 +1,5 @@
 //
-//  ScalablePolygon.swift
+//  PolygonWithMultipleAnimatableParamters.swift
 //  SwiftUI Animations
 //
 //  Created by 陆凯伦 on 2021/9/2.
@@ -7,13 +7,13 @@
 
 import SwiftUI
 
-struct ScalablePolygon: View {
+struct PolygonWithMultipleAnimatableParamters: View {
     @State private var sides = 4
     @State private var scale = 1.0
     
     var body: some View {
         VStack {
-            ScalablePolygonShape(sides: sides, scale: scale)
+            PolygonShape(sides: sides, scale: scale)
                 .stroke(Color.blue, lineWidth: 3)
                 .padding(20)
                 .animation(.easeInOut(duration: 1.75))
@@ -48,17 +48,17 @@ struct ScalablePolygon: View {
                 }
             }
         }
-        .navigationBarTitle("Scalable Polygon")
+        .navigationBarTitle("Polygon with Multiple Animatable Paramters")
     }
 }
 
-struct ScalablePolygon_Previews: PreviewProvider {
+struct PolygonWithMultipleAnimatableParamters_Previews: PreviewProvider {
     static var previews: some View {
-        ScalablePolygon()
+        PolygonWithMultipleAnimatableParamters()
     }
 }
 
-private struct ScalablePolygonShape: Shape {
+private struct PolygonShape: Shape {
     var sides: Int
     var scale: Double
     private var sidesAsDouble: Double
