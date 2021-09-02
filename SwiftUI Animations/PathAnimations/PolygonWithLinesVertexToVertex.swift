@@ -15,7 +15,7 @@ struct PolygonWithLinesVertexToVertex: View {
             PolygonShape(sides: sides)
                 .stroke(Color.pink, lineWidth: 3)
                 .padding(20)
-                .animation(.easeInOut(duration: 3))
+                .animation(.easeInOut(duration: 1.75))
                 .layoutPriority(1)
             Text("\(Int(sides)) Sides").font(.headline)
             HStack(spacing: 20) {
