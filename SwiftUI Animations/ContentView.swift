@@ -21,6 +21,12 @@ struct ContentView: View {
                         destination: PolygonWithMultipleAnimatableParamters(),
                         label: { Text("2. Polygon with Multiple Animatable Paramters") }
                     )
+                    NavigationLink(
+                        destination: PolygonWithLinesVertexToVertex(),
+                        label: { Text("2. Polygon with Lines Vertex-to-vertex") }
+                    )
+                    
+                    
                     
 //                    NavigationLink(destination: Example2(), label: {
 //                        Text("Example 2 (sides: Int)")

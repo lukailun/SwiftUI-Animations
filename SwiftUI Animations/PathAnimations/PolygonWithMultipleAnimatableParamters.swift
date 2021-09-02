@@ -18,7 +18,7 @@ struct PolygonWithMultipleAnimatableParamters: View {
                 .padding(20)
                 .animation(.easeInOut(duration: 1.75))
                 .layoutPriority(1)
-            Text("\(Int(sides)) Sides").font(.headline)
+            Text("\(Int(sides)) Sides, \(String(format: "%.2f", scale)) Scale").font(.headline)
             HStack(spacing: 20) {
                 GreenButton(label: "1") {
                     sides = 1
