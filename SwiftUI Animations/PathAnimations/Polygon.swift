@@ -17,7 +17,7 @@ struct Polygon: View {
                 .padding(20)
                 .animation(.easeInOut(duration: 1.75))
                 .layoutPriority(1)
-            Text("\(Int(sides)) sides").font(.headline)
+            Text("\(Int(sides)) Sides").font(.headline)
             HStack(spacing: 20) {
                 GreenButton(label: "1") { sides = 1 }
                 GreenButton(label: "3") { sides = 3 }
