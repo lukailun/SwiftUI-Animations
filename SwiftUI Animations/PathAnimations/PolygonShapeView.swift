@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PolygonShapeView: View {
-    @State private var sides: Double = 4
+    @State private var sides: Int = 4
     
     var body: some View {
         VStack {
@@ -28,8 +28,8 @@ struct PolygonShapeView: View {
                 GreenButton(label: "+") { sides += 1 }
                 GreenButton(label: "-") { sides = max(sides - 1, 1) }
             }
-            .navigationBarTitle("PolygonShapeView")
         }
+        .navigationBarTitle("PolygonShapeView")
     }
 }
 
@@ -40,11 +40,17 @@ struct PolygonShapeView_Previews: PreviewProvider {
 }
 
 private struct PolygonShape: Shape {
-    var sides: Double
+    var sides: Int
+    private var sidesAsDouble: Double
     
     var animatableData: Double {
-        get { return sides }
-        set { sides = newValue }
+        get { sidesAsDouble }
+        set { sidesAsDouble = newValue }
+    }
+    
+    init(sides: Int) {
+        self.sides = sides
+        self.sidesAsDouble = Double(sides)
     }
     
     func path(in rect: CGRect) -> Path {
