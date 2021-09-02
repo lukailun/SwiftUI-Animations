@@ -58,9 +58,11 @@ private struct PolygonShape: Shape {
         let center = CGPoint(x: rect.size.width / 2.0, y: rect.size.height / 2.0)
         var path = Path()
         let extra = Double(sidesAsDouble) != Double(Int(sidesAsDouble)) ? 1 : 0
+        var vertices: [CGPoint] = []
         for index in 0..<Int(sidesAsDouble) + extra {
             let angle = (Double(index) * (360.0 / Double(sidesAsDouble))) * Double.pi / 180
             let point = CGPoint(x: center.x + CGFloat(cos(angle) * hypotenuse), y: center.y + CGFloat(sin(angle) * hypotenuse))
+            vertices.append(point)
             if index == 0 {
                 path.move(to: point)
             } else {
@@ -68,6 +70,16 @@ private struct PolygonShape: Shape {
             }
         }
         path.closeSubpath()
+        drawVertexLines(path: &path, vertices: vertices, n: 0)
         return path
+    }
+    
+    private func drawVertexLines(path: inout Path, vertices: [CGPoint], n: Int) {
+        if (vertices.count - n) < 3 { return }
+        for i in (n + 2)..<min(n + (vertices.count - 1), vertices.count) {
+            path.move(to: vertices[n])
+            path.addLine(to: vertices[i])
+        }
+        drawVertexLines(path: &path, vertices: vertices, n: n + 1)
     }
 }
