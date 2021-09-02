@@ -17,6 +17,10 @@ struct ContentView: View {
                         destination: Polygon(),
                         label: { Text("1. Polygon") }
                     )
+                    NavigationLink(
+                        destination: ScalablePolygon(),
+                        label: { Text("2. Scalable Polygon") }
+                    )
                     
 //                    NavigationLink(destination: Example2(), label: {
 //                        Text("Example 2 (sides: Int)")

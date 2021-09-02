@@ -1,18 +1,19 @@
 //
-//  Polygon.swift
+//  ScalablePolygon.swift
 //  SwiftUI Animations
 //
-//  Created by 陆凯伦 on 2021/9/1.
+//  Created by 陆凯伦 on 2021/9/2.
 //
 
 import SwiftUI
 
-struct Polygon: View {
+struct ScalablePolygon: View {
     @State private var sides = 4
+    @State private var scale = 1.0
     
     var body: some View {
         VStack {
-            PolygonShape(sides: sides)
+            ScalablePolygonShape(sides: sides, scale: scale)
                 .stroke(Color.blue, lineWidth: 3)
                 .padding(20)
                 .animation(.easeInOut(duration: 1.75))
@@ -29,32 +30,37 @@ struct Polygon: View {
                 GreenButton(label: "-") { sides = max(sides - 1, 1) }
             }
         }
-        .navigationBarTitle("Polygon")
+        .navigationBarTitle("Scalable Polygon")
     }
 }
 
-struct Polygon_Previews: PreviewProvider {
+struct ScalablePolygon_Previews: PreviewProvider {
     static var previews: some View {
-        Polygon()
+        ScalablePolygon()
     }
 }
 
-private struct PolygonShape: Shape {
+private struct ScalablePolygonShape: Shape {
     var sides: Int
+    var scale: Double
     private var sidesAsDouble: Double
     
-    var animatableData: Double {
-        get { sidesAsDouble }
-        set { sidesAsDouble = newValue }
+    var animatableData: AnimatablePair<Double, Double> {
+        get { AnimatablePair(sidesAsDouble, scale) }
+        set {
+            sidesAsDouble = newValue.first
+            scale = newValue.second
+        }
     }
     
-    init(sides: Int) {
+    init(sides: Int, scale: Double) {
         self.sides = sides
+        self.scale = scale
         self.sidesAsDouble = Double(sides)
     }
     
     func path(in rect: CGRect) -> Path {
-        let hypotenuse = Double(min(rect.size.width, rect.size.height)) / 2.0
+        let hypotenuse = Double(min(rect.size.width, rect.size.height)) / 2.0 * scale
         let center = CGPoint(x: rect.size.width / 2.0, y: rect.size.height / 2.0)
         var path = Path()
         let extra = Double(sidesAsDouble) != Double(Int(sidesAsDouble)) ? 1 : 0
