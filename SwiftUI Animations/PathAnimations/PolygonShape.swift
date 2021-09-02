@@ -19,14 +19,14 @@ struct Example1: View {
                 .layoutPriority(1)
             Text("\(Int(sides)) sides").font(.headline)
             HStack(spacing: 20) {
-                MyButton(label: "1") { sides = 1 }
-                MyButton(label: "3") { sides = 3 }
-                MyButton(label: "7") { sides = 7 }
+                GreenButton(label: "1") { sides = 1 }
+                GreenButton(label: "3") { sides = 3 }
+                GreenButton(label: "7") { sides = 7 }
             }
             HStack(spacing: 20) {
-                MyButton(label: "30") { sides = 30 }
-                MyButton(label: "+") { sides += 1 }
-                MyButton(label: "-") { sides = max(sides - 1, 1) }
+                GreenButton(label: "30") { sides = 30 }
+                GreenButton(label: "+") { sides += 1 }
+                GreenButton(label: "-") { sides = max(sides - 1, 1) }
             }
             .navigationBarTitle("Example 1")
             .padding(.bottom, 50)
