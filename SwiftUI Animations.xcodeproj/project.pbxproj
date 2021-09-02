@@ -42,8 +42,8 @@
 		5A8015FF26DF78260028BF16 = {
 			isa = PBXGroup;
 			children = (
-				5A80160A26DF78260028BF16 /* SwiftUI Animations */,
 				5A80160926DF78260028BF16 /* Products */,
+				5A80160A26DF78260028BF16 /* SwiftUI Animations */,
 			);
 			sourceTree = "<group>";
 		};

@@ -20,14 +20,32 @@ struct ScalablePolygon: View {
                 .layoutPriority(1)
             Text("\(Int(sides)) Sides").font(.headline)
             HStack(spacing: 20) {
-                GreenButton(label: "1") { sides = 1 }
-                GreenButton(label: "3") { sides = 3 }
-                GreenButton(label: "7") { sides = 7 }
+                GreenButton(label: "1") {
+                    sides = 1
+                    scale = 1
+                }
+                GreenButton(label: "3") {
+                    sides = 3
+                    scale = 0.7
+                }
+                GreenButton(label: "7") {
+                    sides = 7
+                    scale = 0.3
+                }
             }
             HStack(spacing: 20) {
-                GreenButton(label: "30") { sides = 30 }
-                GreenButton(label: "+") { sides += 1 }
-                GreenButton(label: "-") { sides = max(sides - 1, 1) }
+                GreenButton(label: "30") {
+                    sides = 30
+                    scale = 1
+                }
+                GreenButton(label: "+") {
+                    sides += 1
+                    scale = min(scale * 2, 1)
+                }
+                GreenButton(label: "-") {
+                    sides = max(sides - 1, 1)
+                    scale = min(scale / 2, 1)
+                }
             }
         }
         .navigationBarTitle("Scalable Polygon")
